@@ -47,14 +47,6 @@ async function UserLoginController(req, res) {
     } else {
       throw new Error("Incorrect Password..");
     }
-    // const payload={
-    //     ...req.body,
-    //     role:"GENERAL",
-    //     password:hashPassword
-    // }
-
-    // const userData=userModel(req.body)
-    // const saveUser= await userData.save()
 
 
   } catch (err) {
