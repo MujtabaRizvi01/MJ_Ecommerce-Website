@@ -28,6 +28,7 @@ const Login = () => {
 
     const dataResponse = await fetch(summaryApi.login.url, {
       method: summaryApi.login.method,
+      credentials:"include",
       headers: {
         "content-type": "application/json",
       },
@@ -36,7 +37,7 @@ const Login = () => {
     const dataApi = await dataResponse.json();
     if (dataApi.success) {
       toast.success(dataApi.message);
-      navigate("/login");
+      navigate("/");
     }
 
     if (dataApi.error) {
