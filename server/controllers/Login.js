@@ -41,12 +41,12 @@ async function UserLoginController(req,res){
         // const userData=userModel(req.body)
         // const saveUser= await userData.save()
 
-        // res.status(201).json({
-        //     data:saveUser,
-        //     success:true,
-        //     error:false,
-        //     message:"Logging In..."
-        // })
+        res.status(201).json({
+            
+            success:true,
+            error:false,
+            message:"Logging In..."
+        })
 
     }catch(err){
         res.json({
