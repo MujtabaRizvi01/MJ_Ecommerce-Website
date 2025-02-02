@@ -43,7 +43,7 @@ async function UserLoginController(req, res) {
         data:token,
         message: "Login Successfull...",
       });
-
+      console.log("Auth Token: ", token);
     } else {
       throw new Error("Incorrect Password..");
     }
