@@ -1,0 +1,22 @@
+{
+  "name": "login-signup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MujtabaRizvi01/Login-Signup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MujtabaRizvi01/Login-Signup/issues"
+  },
+  "homepage": "https://github.com/MujtabaRizvi01/Login-Signup#readme",
+  "description": ""
+}
