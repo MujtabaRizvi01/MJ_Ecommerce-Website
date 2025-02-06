@@ -1,14 +1,31 @@
+const jwt = require("jsonwebtoken");
+
+
+
 async function authToken(req, res, next) {
     try {
         // Get token from either cookie or authorization header
         const token = req.cookies?.token || req.headers['authorization'];
 
-        // Check if token exists
         if (token) {
-            // console.log("Auth Token:   ", token);  // Log token if available
+            console.log("Auth Token:   ", token);  // Log token if available
+            
+            jwt.verify(token, process.env.TOKEN_SECRET_KEY, function(err, decoded) {
+                console.log("Error: ",err)
+                console.log("Decoded: ",decoded)
+                // if(err){
+                //     console.log("Error Auth: ",err)
+
+                // }
+                req.userId=decoded?._id
+
+            });
         } else {
-            // If no token is found, you can handle the situation here (e.g., return unauthorized status)
-            return res.status(401).json({ message: "Unauthorized: Token missing" });
+            return res.json({ 
+                message : "Unauthorized: Token missing ", 
+                error : true, 
+                success : false  
+            });
         }
 
         next();  // Pass control to the next middleware or route handler
