@@ -36,7 +36,7 @@ async function UserSignupController(req,res){
             password:hashPassword
         }
 
-        const userData=userModel(req.body)
+        const userData=userModel(payload)
         const saveUser= await userData.save()
 
         res.status(201).json({

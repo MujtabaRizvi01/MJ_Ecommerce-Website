@@ -3,6 +3,9 @@ import App from "../App"
 import Home from "../pages/Home"
 import Login from "../pages/Login"
 import Signup from "../pages/Signup"
+import AdminPanel from '../pages/AdminPanel'
+import AllUsers from '../pages/AllUsers'
+import AllProducts from '../pages/AllProducts'
 
 const router=createBrowserRouter([
     {
@@ -15,12 +18,25 @@ const router=createBrowserRouter([
             },
             {
                 path:"signup",
-                // element:<Signup/>
                 element:<Signup/>
             },
             {
                 path:"login",
                 element:<Login/>
+            },
+            {
+                path:"admin-panel",
+                element:<AdminPanel/>,
+                children:[
+                    {
+                        path:"all-users",
+                        element:<AllUsers/>
+                    },
+                    {
+                        path:"all-products",
+                        element:<AllProducts/>
+                    }
+                ]
             }
         ]
     }
