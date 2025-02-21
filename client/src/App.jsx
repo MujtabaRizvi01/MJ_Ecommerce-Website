@@ -11,6 +11,9 @@ import Context from "./context";
 import { useDispatch } from "react-redux";
 import { setUserDetails } from "./store/userSlice.js";
 
+
+
+
 function App() {
 
   const dispatch=useDispatch()
@@ -22,7 +25,7 @@ function App() {
     });
 
     const dataApi = await dataResponse.json();
-    console.log("User Details: ", dataApi);
+    
     if(dataApi.success){
       dispatch(setUserDetails(dataApi.data))
     }

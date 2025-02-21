@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import SummaryApi from "../common";
 import { setUserDetails } from "../store/userSlice";
 import Context from "../context";
+import ROLE from "../common/role";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -90,19 +91,6 @@ const Header = () => {
                     menuDisplay && (
                       <div className='absolute bg-white bottom-0 top-11 h-fit p-2 shadow-lg rounded' >
                         <nav>
-                             <Link to={"/admin-panel"} className='whitespace-nowrap hidden md:block hover:bg-slate-100 p-2' onClick={()=>setMenuDisplay(preve => !preve)}>Admin Panel</Link>
-                          
-                         
-                        </nav>
-                      </div>
-                    )
-                  }
-
-              {/*                   
-                  
-            
-                      <div className='absolute bg-white bottom-0 top-11 h-fit p-2 shadow-lg rounded' >
-                        <nav>
                           {
                             user?.role === ROLE.ADMIN && (
                               <Link to={"/admin-panel/all-products"} className='whitespace-nowrap hidden md:block hover:bg-slate-100 p-2' onClick={()=>setMenuDisplay(preve => !preve)}>Admin Panel</Link>
@@ -111,9 +99,10 @@ const Header = () => {
                          
                         </nav>
                       </div>
-                    
-                  
-                  */}
+
+                    )
+                  }
+
             </div>
 
             {user?._id && (
@@ -132,7 +121,7 @@ const Header = () => {
               {user?._id ? (
                 <button
                   onClick={handleLogout}
-                  className="px-3 py-1 rounded-full text-white bg-blue-600 hover:bg-black"
+                  className="px-3 py-1 rounded-full transition-all hover:text-blue-600 bg-blue-600 hover:bg-black"
                 >
                   Logout
                 </button>

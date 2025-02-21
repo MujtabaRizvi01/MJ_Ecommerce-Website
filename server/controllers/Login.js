@@ -20,10 +20,10 @@ async function UserLoginController(req, res) {
       throw new Error("User not found..");
     }
 
-    console.log("User Password: ",user.password)
+    // console.log("User Password: ",user.password)
     const checkPassword =  await bcrypt.compareSync(password, user.password);
     // const checkPassword = password === user.password;
-    console.log("checkPassword : ", checkPassword);
+    // console.log("checkPassword : ", checkPassword);
 
     if (checkPassword) {
         const tokenData={

@@ -7,11 +7,11 @@ import { RouterProvider } from 'react-router-dom'
 import router from "./routes"
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
     <Provider store={store}>
 
     <RouterProvider router={router}/>
     
     </Provider>
-  </StrictMode>,
+  // </StrictMode>,
 )
