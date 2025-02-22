@@ -1,21 +1,42 @@
+const cloudName = import.meta.env.VITE_CLOUD_NAME_CLOUDINARY;
 
-const url=`https://api.cloudinary.com/v1_1/${process.env.CLOUD_NAME_CLOUDINARY}/image/upload`
+console.log("Cloudinary Cloud Name:", cloudName); 
 
-const uploadImage= async(image)=>{
-    const formData =new FormData()
-    formData.append("file",image)
-    formData.append("upload_preset","MJ_Ecommerce")
-
-
-    const dataResponse=await fetch(url,{
-        method:"post",
-        body:formData
-    })
-
-    return dataResponse.json()
+if (!cloudName) {
+    console.error("❌ Cloudinary cloud name is missing. Check your .env file.");
 }
 
-export default uploadImage
+const url = `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`;
+console.log("Cloudinary Upload URL:", url); 
+
+const uploadImage = async (image) => {
+    console.log("📤 Uploading Image:", image); // Debugging log
+
+    const formData = new FormData();
+    formData.append("file", image);
+    formData.append("upload_preset", "MJ_Ecommerce");
+
+    console.log("📂 FormData:", formData); 
+
+    try {
+        const dataResponse = await fetch(url, {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await dataResponse.json();
+        console.log("✅ Cloudinary Response:", data); 
+
+        return data;
+    } catch (error) {
+        console.error("❌ Upload Failed:", error);
+        return null;
+    }
+};
+
+export default uploadImage;
+
+
 
 // import React from 'react';
 
