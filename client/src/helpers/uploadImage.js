@@ -1,6 +1,6 @@
 const cloudName = import.meta.env.VITE_CLOUD_NAME_CLOUDINARY;
 
-console.log("Cloudinary Cloud Name:", cloudName); 
+console.log("Cloudinary Cloud Name:", cloudName);
 
 if (!cloudName) {
     console.error("❌ Cloudinary cloud name is missing. Check your .env file.");

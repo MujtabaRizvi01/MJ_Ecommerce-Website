@@ -6,7 +6,7 @@ const Footer = () => {
       icon: <FaEnvelope className="w-6 h-6 text-blue-500" />,
       title: "Email",
       description: "Our friendly team is here to help.",
-      contact: "hello@merakiui.com",
+      contact: "hello@mjecommerce.com",
     },
     {
       icon: <FaMapMarkerAlt className="w-6 h-6 text-blue-500" />,
@@ -17,8 +17,8 @@ const Footer = () => {
     {
       icon: <FaPhone className="w-6 h-6 text-blue-500" />,
       title: "Phone",
-      description: "Mon-Fri from 8am to 5pm.",
-      contact: "+1 (555) 000-0000",
+      description: "Mon-Fri from 9am to 5pm.",
+      contact: "+92 (333) 000-0000",
     },
   ];
 
@@ -27,7 +27,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="text-center">
           <p className="font-medium text-blue-500 dark:text-blue-400">Contact us</p>
-          <h1 className="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">
+          <h1 className="mt-2 text-2xl font-semibold cursor-pointer text-gray-800 md:text-3xl dark:text-white">
             Get in touch
           </h1>
           <p className="mt-3 text-gray-500 dark:text-gray-400">
