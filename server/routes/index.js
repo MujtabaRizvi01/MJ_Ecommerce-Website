@@ -8,6 +8,7 @@ const AllUsersController = require("../controllers/AllUsers.js");
 const UpdateUserController = require("../controllers/UpdateUser.js");
 const UploadProductController = require("../controllers/UploadProduct.js");
 const AllProductsController=require('../controllers/AllProducts.js')
+const UpdateProductController=require("../controllers/UpdateProduct")
 
 const router = express.Router();
 
@@ -24,5 +25,7 @@ router.post("/user-update",authToken,UpdateUserController);
 // Product
 router.post("/upload-product",authToken,UploadProductController);
 router.get("/all-products",authToken,AllProductsController);
+router.post("/update-product",authToken,UpdateProductController);
+router.post("/update-product",authToken,UpdateProductController)
 
 module.exports = router;
