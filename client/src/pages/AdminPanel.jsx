@@ -34,7 +34,7 @@ const AdminPanel = () => {
         </div>
 
         <div>
-          <nav className="grid p-4 hover:text-blue">
+          <nav className="grid p-4 font-semibold hover:text-blue">
             {/* <Link
               to={"all-users"}
               className="hover:text-blue-600 px-2 py-1 hover:bg-slate-100"
@@ -50,14 +50,14 @@ const AdminPanel = () => {
               </Link> */}
             <Link
               to={"all-users"}
-              className="relative inline-block px-4 py-3 mb-1 min-w-[120px] border-0 rounded-lg bg-gradient-to-b from-[#4C6EF5] to-[#0A3D8C] text-white opacity-66 cursor-pointer transition-all duration-1000 ease-[cubic-bezier(0.15,0.83,0.66,1)] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] group"
+              className="relative text-black hover:bg-gradient-to-b hover:from-[#47515C] hover:to-[#0B151E] hover:text-blue-500 inline-block px-4 py-3 mb-1 min-w-[120px] border-0 rounded-lg bg-gradient-to-b from-[#4C6EF5] to-[#0A3D8C] opacity-66 cursor-pointer transition-all duration-1000 ease-[cubic-bezier(0.15,0.83,0.66,1)] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] group"
             >
               All Users
               <span className="absolute bottom-0 left-[15%] w-[70%] h-[1px] bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transition-all duration-1000 ease-[cubic-bezier(0.15,0.83,0.66,1)] group-hover:opacity-100"></span>
             </Link>
             <Link
               to={"all-products"}
-              class="relative inline-block px-4 py-3 min-w-[120px] border-0 rounded-lg bg-gradient-to-b from-[#4C6EF5] to-[#0A3D8C] text-white opacity-66 cursor-pointer transition-all duration-1000 ease-[cubic-bezier(0.15,0.83,0.66,1)] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] group"
+              class="hover:bg-gradient-to-b hover:from-[#47515C] hover:to-[#0B151E] hover:text-blue-500 relative inline-block px-4 py-3 min-w-[120px] border-0 rounded-lg bg-gradient-to-b from-[#4C6EF5] to-[#0A3D8C] text-black opacity-66 cursor-pointer transition-all duration-1000 ease-[cubic-bezier(0.15,0.83,0.66,1)] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] group"
             >
               All Products
               <span className="absolute bottom-0 left-[15%] w-[70%] h-[1px] bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transition-all duration-1000 ease-[cubic-bezier(0.15,0.83,0.66,1)] group-hover:opacity-100"></span>
