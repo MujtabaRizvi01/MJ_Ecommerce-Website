@@ -32,7 +32,7 @@ const AllProducts = () => {
 
         {/* *all product */}
         {/* h-[calc(100vh-190px)] is part of below div*/}
-        <div className=' flex items-center flex-wrap gap-3 py-4  overflow-y-scroll'>
+        <div className=' flex items-center flex-wrap gap-3 py-4 overflow-y-scroll'>
           {
             allProduct.map((product,index)=>{
               return(

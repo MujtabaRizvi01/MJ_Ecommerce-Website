@@ -1,14 +1,15 @@
 const express = require("express");
-const UserSignupController = require("../controllers/Signup.js");
-const UserLoginController = require("../controllers/Login.js");
-const UserDetailsController = require("../controllers/UserDetails.js");
-const UserLogoutController = require("../controllers/Logout.js");
+const UserSignupController = require("../controllers/User/Signup.js");
+const UserLoginController = require("../controllers/User/Login.js");
+const UserDetailsController = require("../controllers/User/UserDetails.js");
+const UserLogoutController = require("../controllers/User/Logout.js");
 const authToken = require("../middlewares/authToken.js");
-const AllUsersController = require("../controllers/AllUsers.js");
-const UpdateUserController = require("../controllers/UpdateUser.js");
-const UploadProductController = require("../controllers/UploadProduct.js");
-const AllProductsController=require('../controllers/AllProducts.js')
-const UpdateProductController=require("../controllers/UpdateProduct")
+const AllUsersController = require("../controllers/User/AllUsers.js");
+const UpdateUserController = require("../controllers/User/UpdateUser.js");
+const UploadProductController = require("../controllers/Product/UploadProduct.js");
+const AllProductsController=require('../controllers/Product/AllProducts.js')
+const UpdateProductController=require("../controllers/Product/UpdateProduct");
+const getCategoryProductController = require("../controllers/Product/GetCategoryProductOne.js");
 
 const router = express.Router();
 
@@ -26,6 +27,7 @@ router.post("/user-update",authToken,UpdateUserController);
 router.post("/upload-product",authToken,UploadProductController);
 router.get("/all-products",authToken,AllProductsController);
 router.post("/update-product",authToken,UpdateProductController);
-router.post("/update-product",authToken,UpdateProductController)
+router.post("/update-product",authToken,UpdateProductController);
+router.get("/get-categoryProduct",getCategoryProductController)
 
 module.exports = router;

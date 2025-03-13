@@ -1,4 +1,4 @@
-const userModel=require('../models/userModel')
+const userModel=require('../../models/userModel')
 async function UserDetailsController(req,res){
     try{
         // console.log("userId",req.userId)
