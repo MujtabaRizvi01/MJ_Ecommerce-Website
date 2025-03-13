@@ -15,7 +15,7 @@ import { setUserDetails } from "./store/userSlice.js";
 
 
 function App() {
-
+  
   const dispatch=useDispatch()
 
   const fetchUserDetails = async () => {
@@ -33,7 +33,7 @@ function App() {
 
   useEffect(() => {
     fetchUserDetails();
-  });
+  }),[];
 
   return (
     <>
