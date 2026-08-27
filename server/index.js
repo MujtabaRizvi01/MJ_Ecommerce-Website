@@ -30,12 +30,12 @@ app.use((req, res, next) => {
 
 app.use("/api", router);
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8090;
 
 // ✅ Connect to Database & Start Server
 connectDB().then(() => {
     app.listen(PORT, () => {
-        console.log("✅ Connected to Database...");
+        console.log("✅ Connected to MongoDb...");
         console.log(`🚀 Server running on http://localhost:${PORT}`);
     });
 });
