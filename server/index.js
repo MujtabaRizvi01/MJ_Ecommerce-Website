@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 
 app.use("/api", router);
 
-const PORT = process.env.PORT || 8090;
+const PORT = process.env.PORT || 8080;
 
 // ✅ Connect to Database & Start Server
 connectDB().then(() => {
